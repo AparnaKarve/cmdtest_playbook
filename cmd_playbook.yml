@@ -1,0 +1,9 @@
+---
+- name: use command to do things 
+  hosts: all 
+  user: ansible
+  become: true
+ 
+  tasks:
+  - name: get coreutils version
+    command: rpm -q coreutils
