@@ -6,7 +6,4 @@
   
   tasks: 
     - name: get coreutils version and install pip
-      commmand: "{{ item }}"
-      with_items:
-        - rpm -q coreutils
-        - yum install pip
+      command: rpm -q coreutils
