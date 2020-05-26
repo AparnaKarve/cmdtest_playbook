@@ -3,9 +3,10 @@
   hosts: all 
   user: ansible
   become: true
-  
-  tasks: 
-    - name: get coreutils version and install pip
-      commmand: "{{ item }}"
-      with_items:
-        - rpm -q coreutils
+
+  tasks:
+  - name: get coreutils version
+    command: "{{ item }}"
+    with_items:
+      - rpm -q coreutils
+      - yum install -y python3
