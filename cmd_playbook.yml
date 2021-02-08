@@ -6,8 +6,7 @@
 
   tasks:
   - name: get coreutils version
-    block:
-      command: "{{ item }}"
-      with_items:
-        - rpm -q coreutils
-        - yum install -y python3
+    command: "{{ item }}"
+    with_items:
+      - rpm -q coreutils
+      - yum install -y python3
